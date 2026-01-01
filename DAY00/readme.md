@@ -25,6 +25,7 @@ There is following phase involve in it...
                 -> Code should not tightly coupled(independ to other module).
                 ->Example---if we developed the notification component once, we can use it again & again(Plug & Play model).         
                             Using common utility functions,Creating generic classes & Applying OOP principles like inheritance and composition
+# DSA is the brain of Application then LLD is the Skeleton..
 
 
 
