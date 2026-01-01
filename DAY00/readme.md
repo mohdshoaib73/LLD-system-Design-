@@ -14,13 +14,13 @@ There is following phase involve in it...
 #### further updated version
 
 ### LLD mainly focusing on these three...
-        #### Scalability
+#### Scalability
                 ->It focuses on ensuring that the application can sustain all condition such as handling 
                 million of concurrent user requests.
-        #### Maintainability
+#### Maintainability
                 ->It ensure that application can be easily debug & updated.
                 ->Good code structure reduce the future development cost and easy to maintain.
-        #### Reusability       
+ #### Reusability       
                 -> It means using same code,method or component in diffrent application without rewriting.
                 -> Code should not tightly coupled(independ to other module).
                 ->Example---if we developed the notification component once, we can use it again & again(Plug & Play model).         
