@@ -117,4 +117,24 @@ Class remains abstract
 
 Proper destruction of base part
 
+#### When you REALLY need a virtual destructor
+
+You must use it when
+
+You delete derived objects using base pointers
+
+Your base class is intended for polymorphic use
+
+Your abstract class defines an interface
+
+##### Example use cases:
+
+Plugin systems
+
+Factory pattern
+
+Dependency injection
+
+Framework base classes
+
 
