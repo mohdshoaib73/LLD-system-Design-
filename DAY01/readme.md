@@ -61,4 +61,60 @@ When deleting a derived object using a base-class pointer, the base class must h
 
               v->sart();
        }
+ 
+ ### Why we use virtual destructor in Abstract Class ?
+abstract classes are usually used as base classes and accessed via base pointers.
+
+If the base class destructor is not virtual, only the base part of the object gets destroyed derived class resources leak.
+
+#### Example
+
+     #include <iostream>
+     using namespace std;
+
+     class Base {
+    public:
+    ~Base() {
+        cout << "Base destructor\n";
+       }
+    };
+
+       class Derived : public Base {
+       public:
+      ~Derived() {
+        cout << "Derived destructor\n";
+        }
+     };
+
+    int main() {
+    Base* obj = new Derived();
+    delete obj;   
+    }
+
+    Only exicuted OP== Base destructor and Derived mem leaked coz Derived destructor is never called
+
+### Making the base class destructor virtual enables runtime polymorphism for destruction.
+       class Base {
+       public:
+        virtual ~Base() {
+        cout << "Base destructor\n";
+        }
+       };
+## Pure virtual destructor
+        class Base {
+        public:
+         virtual ~Base() = 0;   // pure virtual destructor
+       };
+
+      Base::~Base() {
+       cout << "Base destructor\n";
+     }       
+Destructor must still be implemented
+
+It ensures:
+
+Class remains abstract
+
+Proper destruction of base part
+
 
