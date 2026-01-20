@@ -47,8 +47,6 @@ Overall, UML diagrams play a crucial role in enhancing the quality and efficienc
 
 
 #### Class Diagram Example
-
-```plaintext
 +----------------+          +----------------+
 |    Person      |          |    Student     |
 +----------------+          +----------------+
@@ -67,5 +65,7 @@ Overall, UML diagrams play a crucial role in enhancing the quality and efficienc
 +----------------+
 | + work(): void |
 +----------------+
+
+All above is an example of a simple class diagram representing a Person class with two subclasses: Student and Employee. The Person class has attributes for name and age, along with a method to get details. The Student class adds a studentID attribute and an enroll method, while the Employee class includes an employeeID attribute and a work method.
 ```
 
